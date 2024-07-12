@@ -4,6 +4,15 @@ import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
 
 export default defineConfig({
+  base: "/week2/",
+  build: {
+    outDir: "dist",
+    rollupOptions: {
+      output: {
+        assetFileNames: "assets/[name].[hash].[ext]",
+      },
+    },
+  },
   plugins: [
     // Without Data
     ViteEjsPlugin(),
