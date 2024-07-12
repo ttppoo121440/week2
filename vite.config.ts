@@ -4,7 +4,7 @@ import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
 
 export default defineConfig({
-  base: "/week2/",
+  base: process.env.VITE_BASE_URL || "/",
   build: {
     outDir: "dist",
     rollupOptions: {

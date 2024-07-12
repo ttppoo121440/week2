@@ -16,7 +16,7 @@
   }
 
   .menu-item {
-    @apply block pt-10 hover:text-[#9C27B0];
+    @apply block py-10 hover:text-[#9C27B0];
   }
 
   .card-item {
