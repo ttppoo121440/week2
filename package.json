@@ -6,7 +6,7 @@
   "scripts": {
     "start": "run-p dev watch:css",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && postcss src/assets/styles/tailwind.css -o dist/styles.css",
     "build:css": "postcss src/assets/styles/tailwind.css -o dist/styles.css",
     "watch:css": "postcss src/assets/styles/tailwind.css -o src/assets/styles/styles.css --watch",
     "preview": "vite preview"
