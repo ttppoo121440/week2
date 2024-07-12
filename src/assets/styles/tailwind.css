@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply mx-auto;
+    max-width: 1296px;
+  }
+  .btn {
+    @apply inline-flex w-[185px] items-center justify-center rounded-full py-3 text-base hover:text-[#9C27B0];
+  }
+
+  .title-base {
+    @apply text-[64px];
+  }
+
+  .menu-item {
+    @apply block pt-10 hover:text-[#9C27B0];
+  }
+
+  .card-item {
+    @apply col-span-3 border p-4 shadow-[4px_4px_4px_0px_rgba(0,0,0,0.08)];
+  }
+
+  .card-content {
+    @apply mb-1 text-xl leading-[30px];
+  }
+
+  .social-effect {
+    @apply rounded-[40px] transition-all hover:shadow-[0px_0px_16px_3px_rgba(144,148,255,0.9)];
+  }
+}
