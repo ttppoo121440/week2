@@ -2,9 +2,10 @@ import { defineConfig } from "vite";
 import { ViteEjsPlugin } from "vite-plugin-ejs";
 import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  base: process.env.VITE_BASE_URL || "/",
+  base: process.env.NODE_ENV === "production" ? "/week2/" : "/",
   build: {
     outDir: "dist",
     rollupOptions: {
@@ -14,6 +15,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    tsconfigPaths(),
     // Without Data
     ViteEjsPlugin(),
     // With Data
